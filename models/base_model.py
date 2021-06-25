@@ -5,7 +5,7 @@ class BaseModel that defines all common
 methods for other classes
 """
 
-from uuid import uuid4()
+from uuid import uuid4
 from datetime import datetime
 import json
 import models
@@ -43,14 +43,14 @@ class BaseModel:
         
         
         
-    def self.__dict__(self):
+    def __dict__(self):
       """dictionary with the values
 
       Returns:
           [dict]: [containing all keys/values ]
       """
-        dictionary = self.__dict__.copy()
-        dictionary["__class__"] = self.__class__.__name__
-        dictionary["created_at"] = self.created_at.isoformat()
-        dictionary["updated_at"] = self.updated_at.isoformat()
-        return dictionary
+      dictionary = self.__dict__
+      dictionary["__class__"] = self.__class__.__name__
+      dictionary["created_at"] = self.created_at.isoformat()
+      dictionary["updated_at"] = self.updated_at.isoformat()
+      return dictionary
