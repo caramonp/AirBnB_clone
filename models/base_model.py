@@ -17,9 +17,9 @@ class BaseModel:
     """
     def __init__(self, *args, **kwargs):
         if kwargs:
-          for  key, value in kwargs.users():
+          for  key, value in kwargs.items():
               if key != "__class__":
-                if keys == "created_at" or keys == "updated_at":
+                if key == "created_at" or key == "updated_at":
                         val = datetime.strptime(val, "%Y-%m-%dT%H:%M:%S.%f")
                 setatrr(self, key, value)
         else:
