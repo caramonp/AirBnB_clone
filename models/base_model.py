@@ -33,7 +33,7 @@ class BaseModel:
         """
         public instance to print name, id, dict
         """
-        print ("[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__))
+        return ("[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__))
         
     def save(self):
       """
@@ -43,7 +43,7 @@ class BaseModel:
         
         
         
-    def __dict__(self):
+    def to_dict(self):
       """dictionary with the values
 
       Returns:
@@ -54,3 +54,4 @@ class BaseModel:
       dictionary["created_at"] = self.created_at.isoformat()
       dictionary["updated_at"] = self.updated_at.isoformat()
       return dictionary
+
