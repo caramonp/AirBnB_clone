@@ -4,7 +4,8 @@
 (aqui va la descripcion del proyecto, que es la consola que hace, etc)
 
 ![Objetive Console](https://github.com/caramonp/AirBnB_clone/blob/main/images/objetive_console.JPG)
-Format: ![Objetive Console](https://intranet.hbtn.io/concepts/74)
+![Objetive Console](https://intranet.hbtn.io/concepts/74)
+
 The console will be a tool to validate this storage engine.
 
 The console has the ability to:
