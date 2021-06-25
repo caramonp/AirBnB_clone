@@ -2,6 +2,13 @@
 
 ### About the proyect
 (aqui va la descripcion del proyecto, que es la consola que hace, etc)
+The console will be a tool to validate this storage engine.
+
+The console has the ability to:
+- create a data model
+- manage (create, update, destroy, etc) objects via a console / command interpreter.
+- store and persist objects to a file (JSON file).
+
 ### How to install
 (requerimientos del sistema, que programas y que versiones usamos, y comandos para intalar este programa)
 ### Flowchard
@@ -13,6 +20,8 @@
 
 ### Rsources
 (los recursos que usamos para solucionarlo)
+[Packages](https://docs.python.org/3.4/tutorial/modules.html#packages)
+[Python packages](https://intranet.hbtn.io/concepts/66)
 
 ### Authors
 (autores, preferiblemente conlik a linkedin, twiter, github)
