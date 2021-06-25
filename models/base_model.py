@@ -8,6 +8,7 @@ methods for other classes
 from uuid import uuid4()
 from datetime import datetime
 import json
+import models
 
 
 class BaseModel:
@@ -23,7 +24,7 @@ class BaseModel:
                 setatrr(self, key, value)
         else:
             self.id = str(uuid4())
-            self.created_at = datetime.currently()
+            self.created_at = datetime.now()
             self.updated_at = self.created_at
               
                   
@@ -38,7 +39,7 @@ class BaseModel:
       """
       updates the public instance attribute with the current datetime
       """
-      self.updated_at = datetime.currently()
+      self.updated_at = datetime.now()
         
         
         
