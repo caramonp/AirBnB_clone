@@ -1,4 +1,4 @@
-# AirBnB: The consola.
+# AirBnB: The console.
 
 ### About the proyect
 (aqui va la descripcion del proyecto, que es la consola que hace, etc)
