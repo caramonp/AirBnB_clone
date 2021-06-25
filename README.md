@@ -24,8 +24,9 @@ The console has the ability to:
 
 ### Rsources
 (los recursos que usamos para solucionarlo)
-[Packages](https://docs.python.org/3.4/tutorial/modules.html#packages)
-[Python packages](https://intranet.hbtn.io/concepts/66)
+
+- [Packages](https://docs.python.org/3.4/tutorial/modules.html#packages)
+- [Python packages](https://intranet.hbtn.io/concepts/66)
 
 ### Authors
 (autores, preferiblemente conlik a linkedin, twiter, github)
