@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-class BaseModel that defines all common 
+class BaseModel that defines all common
 methods for other classes
 """
 
@@ -17,7 +17,7 @@ class FileStorage:
 
     def all(self):
         return self.__objects
-    
+
     def new(self, obj):
         key = obj.__class__.__name__ + "." + obj.id
         self.__objects[key] = obj
@@ -25,10 +25,11 @@ class FileStorage:
     def save(self):
         #__file_path = JSON.dump(__objects)
         #return to_json
+        pass
 
     def reload(self):
         #try:
         #   my_json_object = json.dump(__objects)
         # except FileNotFoundError:
-        #    pass
+            pass
 
