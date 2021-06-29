@@ -11,6 +11,7 @@ import json
 import models
 import os
 
+
 class FileStorage:
 
     __file_path = "file.json"
