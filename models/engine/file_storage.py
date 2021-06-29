@@ -32,4 +32,3 @@ class FileStorage:
         #   my_json_object = json.dump(__objects)
         # except FileNotFoundError:
             pass
-
