@@ -33,20 +33,24 @@ class FileStorage:
             obj ([objects]): [new objets]
         """
         key_compoust = obj.__class__.__name__ + "." + obj.id
-        self.__objects.update({key_compoust: obj})
+        # en los diccionarios si la clave no existe la crea,
+        # y si existe la reemplaza.
+        self.__objects[key_compoust] = obj
 
     def save(self):
         """[serializes __objects to the JSON file]
         """
         dict_string = {}
-        with open(self.__file_path, 'w', encoding='UTF8') as file:
-            for key, value in self.__objects.items():
+        for key, value in self.__objects.items():
                 dict_string[key] = value.to_dict()
-            file.write(json.dumps(dict_string, indent=4))
+        with open(self.__file_path, 'w', encoding='UTF8') as file:
+            json.dump(dict_string, file, indent=4)
 
     def reload(self):
         """[ deserializes the JSON file to __objects]
         """
+        from models.base_model import BaseModel
+        dict_reload = {}
         try:
             with open(self.__file_path) as file:
                 dict_desco = json.load(file)
