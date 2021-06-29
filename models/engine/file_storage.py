@@ -5,6 +5,7 @@ class BaseModel that defines all common
 methods for other classes
 """
 from models.base_model import BaseModel
+from models import User
 from uuid import uuid4
 from datetime import datetime
 import json
@@ -16,7 +17,7 @@ class FileStorage:
     """[class FileStorage]
 
     Returns:
-        [data]: [serializes instances to a JSON file 
+        [data]: [serializes instances to a JSON file
         and deserializes JSON file to instances]
     """
 
