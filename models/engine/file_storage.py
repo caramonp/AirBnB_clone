@@ -4,8 +4,6 @@
 class BaseModel that defines all common
 methods for other classes
 """
-from models.base_model import BaseModel
-from models.user import User
 from uuid import uuid4
 from datetime import datetime
 import json
@@ -55,11 +53,19 @@ class FileStorage:
     def reload(self):
         """[ deserializes the JSON file to __objects]
         """
+        from models.base_model import BaseModel
+        from models.state import State
+        from models.city import City
+        from models.amenity import Amenity
+        from models.place import Place
+        from models.review import Review
+        from models.user import User
+        
         try:
             with open(FileStorage.__file_path) as file:
                 dict_desco = json.load(file)
             for key, value in dict_desco.items():
                 obj = value["__class__"]
-                self.__objects[key] = globals()[obj](**value)
+                self.__objects[key] = locals()[obj](**value)
         except BaseException:
             pass
