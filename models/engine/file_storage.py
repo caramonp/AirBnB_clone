@@ -5,13 +5,21 @@ class BaseModel that defines all common
 methods for other classes
 """
 from models.base_model import BaseModel
+from models.user import User
 from uuid import uuid4
 from datetime import datetime
 import json
 import models
 import os
 
+
 class FileStorage:
+    """[class FileStorage]
+
+    Returns:
+        [data]: [serializes instances to a JSON file
+        and deserializes JSON file to instances]
+    """
 
     __file_path = "file.json"
     __objects = {}

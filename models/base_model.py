@@ -16,6 +16,8 @@ class BaseModel:
     class BaseModel for the common methods
     """
     def __init__(self, *args, **kwargs):
+        """Initialize class base
+        """
         if kwargs:
             for key, value in kwargs.items():
                 if key != "__class__":

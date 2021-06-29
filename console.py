@@ -3,8 +3,10 @@
 
 import cmd
 from models.base_model import BaseModel
+from models.user import User
 from models import storage
 import shlex
+
 
 class HBNBCommand(cmd.Cmd):
     """ prompt of the command interpreter """
@@ -35,7 +37,7 @@ class HBNBCommand(cmd.Cmd):
             try:
                 new_object = globals()[args[0]]()
                 new_object.save()
-                print (new_object.id)
+                print(new_object.id)
             except BaseException:
                 print("** class doesn't exist **")
 
@@ -49,7 +51,7 @@ class HBNBCommand(cmd.Cmd):
             args (2) id: id of the object to search
         """
         if not args:
-             print("** class name missing **")
+            print("** class name missing **")
         else:
             args = shlex.split(args)
             if args[0] in globals():
@@ -94,8 +96,9 @@ class HBNBCommand(cmd.Cmd):
         or not on the class name
 
         Args:
-            args (1) Class Name: this arg is optional. show all objects that esist
-             in the program of the class name.
+            args (1) Class Name: this arg is optional.
+                show all objects that esist
+                in the program of the class name.
         """
         all_list = []
         if not args:
@@ -140,7 +143,7 @@ class HBNBCommand(cmd.Cmd):
             else:
                 key = args[0]+"."+args[1]
                 instance = storage.all()[key]
-                instance.__dict__[args[2]] =args[3]
+                instance.__dict__[args[2]] = args[3]
                 instance.save()
 
 
