@@ -3,7 +3,7 @@
 
 import cmd
 from models.base_model import BaseModel
-from models.User import User
+from models.user import User
 from models import storage
 import shlex
 

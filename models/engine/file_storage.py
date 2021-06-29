@@ -5,7 +5,7 @@ class BaseModel that defines all common
 methods for other classes
 """
 from models.base_model import BaseModel
-from models.User import User
+from models.user import User
 from uuid import uuid4
 from datetime import datetime
 import json
