@@ -3,7 +3,7 @@
 ### About the proyect
 (aqui va la descripcion del proyecto, que es la consola que hace, etc)
 
-![Objetive Console](https://github.com/caramonp/AirBnB_clone/blob/main/images/objetive_console.JPG)
+<center>![Objetive Console](https://github.com/caramonp/AirBnB_clone/blob/main/images/objetive_console.JPG)</center>
 
 
 The console will be a tool to validate this storage engine.
