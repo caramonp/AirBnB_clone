@@ -4,7 +4,6 @@
 class BaseModel that defines all common
 methods for other classes
 """
-
 from models.base_model import BaseModel
 from uuid import uuid4
 from datetime import datetime
@@ -16,7 +15,6 @@ class FileStorage:
 
     __file_path = "file.json"
     __objects = {}
-    dict_clases = {"BaseModel": BaseModel}
 
     def all(self):
         """Public instance
@@ -32,7 +30,7 @@ class FileStorage:
         Args:
             obj ([objects]): [new objets]
         """
-        key_compoust = obj.__class__.__name__ + "." + obj.id
+        key_compoust = obj.__class__.__name__+"."+obj.id
         # en los diccionarios si la clave no existe la crea,
         # y si existe la reemplaza.
         self.__objects[key_compoust] = obj
@@ -42,19 +40,18 @@ class FileStorage:
         """
         dict_string = {}
         for key, value in self.__objects.items():
-                dict_string[key] = value.to_dict()
+            dict_string[key] = value.to_dict()
         with open(self.__file_path, 'w', encoding='UTF8') as file:
             json.dump(dict_string, file, indent=4)
 
     def reload(self):
         """[ deserializes the JSON file to __objects]
         """
-        from models.base_model import BaseModel
-        dict_reload = {}
         try:
-            with open(self.__file_path) as file:
+            with open(FileStorage.__file_path) as file:
                 dict_desco = json.load(file)
             for key, value in dict_desco.items():
-                self.__objects[key] = FileStorage.dict_clases[value["__class__"]](**value)
-        except:
-            return
+                obj = value["__class__"]
+                self.__objects[key] = globals()[obj](**value)
+        except BaseException:
+            pass
