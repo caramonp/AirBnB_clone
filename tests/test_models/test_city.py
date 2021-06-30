@@ -7,18 +7,20 @@ import unittest
 
 
 class Testcity(unittest.TestCase):
+    """[Test for the class City]
+    """
 
     def test_docstring(self):
-        """[Checks for docstring]
+        """[Checks is docstring exist]
         """
-        self.assertTrue(len(City.__doc__) > 1)
-        self.assertTrue(len(City.__init__.__doc__) > 1)
-        self.assertTrue(len(City.__str__.__doc__) > 1)
-        self.assertTrue(len(City.save.__doc__) > 1)
-        self.assertTrue(len(City.to_dict.__doc__) > 1)
+        self.assertTrue(len(City.__doc__) >= 1)
+        self.assertTrue(len(City.__init__.__doc__) >= 1)
+        self.assertTrue(len(City.__str__.__doc__) >= 1)
+        self.assertTrue(len(City.save.__doc__) >= 1)
+        self.assertTrue(len(City.to_dict.__doc__) >= 1)
     
     def test_pep8_conformance_city(self):
-        """[Test that we conform to PEP8]
+        """[Test that for style PEP8]
         """
         Style = pep8.StyleGuide(quiet=True)
         result = Style.check_files(['models/city.py'])
