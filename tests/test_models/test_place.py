@@ -33,7 +33,7 @@ class TestPlace(unittest.TestCase):
         self.assertTrue(hasattr(Place, "amenity_ids"))
 
     def test_has_attribute(self):
-        """Tests if state have the attributes correctly"""
+        """Tests if place have the attributes correctly"""
         test_2 = Place()
         self.assertTrue(hasattr(test_2, "__init__"))
         self.assertTrue(hasattr(test_2, "created_at"))
@@ -41,7 +41,7 @@ class TestPlace(unittest.TestCase):
         self.assertTrue(hasattr(test_2, "id"))
 
     def test_type(self):
-        """tests the type of state attribute for class"""
+        """tests the type of place attribute for class"""
         self.assertEqual(type(Place.city_id), str)
         self.assertEqual(type(Place.user_id), str)
         self.assertEqual(type(Place.name), str)
