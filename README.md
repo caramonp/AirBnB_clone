@@ -9,11 +9,11 @@ The console will be a tool to validate this storage engine
 
 basically the console do:
 
--Create a new object (ex: a new User or a new Place)
--Retrieve an object from a file, a database etc
--Do operations on objects (count, compute stats, etc)
---Update attributes of an object
-Destroy an object
+-<br>Create a new object (ex: a new User or a new Place)</br>
+-<br>Retrieve an object from a file, a database etc</br>
+-<br>Do operations on objects (count, compute stats, etc)</br>
+-<br>Update attributes of an object</br>
+-<br>Destroy an object</br>
 
 
 ![Objetive Console](https://github.com/caramonp/AirBnB_clone/blob/main/images/objetive_console.JPG)
