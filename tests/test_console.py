@@ -15,4 +15,7 @@ class Testconsole(unittest.TestCase):
         result = Style.check_files(['console.py'])
         self.assertEqual(result.total_errors, 0,
                          "Found code style errors (and warnings).")
+        
+if __name__ == '__main__':
+    unittest.main()
   
