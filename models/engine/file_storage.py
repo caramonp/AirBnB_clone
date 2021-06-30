@@ -60,7 +60,7 @@ class FileStorage:
         from models.place import Place
         from models.review import Review
         from models.user import User
-        
+
         try:
             with open(FileStorage.__file_path) as file:
                 dict_desco = json.load(file)
