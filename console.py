@@ -17,11 +17,11 @@ class HBNBCommand(cmd.Cmd):
     """ prompt of the command interpreter """
     prompt = '(hbnb) '
 
-    def do_quit(self, _input):
+    def do_quit(self, args):
         """Quit command to exit the program"""
         return True
 
-    def do_EOF(self, _input):
+    def do_EOF(self, args):
         """EOF command to exit the program"""
         return True
 
@@ -61,10 +61,10 @@ class HBNBCommand(cmd.Cmd):
             args = shlex.split(args)
             if args[0] in globals():
                 if len(args) > 1:
-                    dict_show = storage.all()
+                    _dict = storage.all()
                     key = args[0]+"."+args[1]
-                    if key in dict_show:
-                        print(dict_show[key])
+                    if key in _dict:
+                        print(_dict[key])
                     else:
                         print("** no instance found **")
                 else:
@@ -90,6 +90,8 @@ class HBNBCommand(cmd.Cmd):
                     if obj_destroy in storage.all():
                         storage.all().pop(obj_destroy)
                         storage.save()
+                    else:
+                        print("** no instance found **")
                 else:
                     print("** instance id missing **")
             else:
