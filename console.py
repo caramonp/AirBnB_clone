@@ -15,7 +15,7 @@ import shlex
 
 class HBNBCommand(cmd.Cmd):
     """ prompt of the command interpreter """
-    prompt = '(hbnb)'
+    prompt = '(hbnb) '
 
     def do_quit(self, _input):
         """Quit command to exit the program"""
