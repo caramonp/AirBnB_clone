@@ -35,12 +35,12 @@ class TestAmenity(unittest.TestCase):
         self.assertTrue(hasattr(test_2, "updated_at"))
         self.assertTrue(hasattr(test_2, "id"))
 
-    def test_name_amenity(self):
-        """[Test attribute name of Class Amenity]
-        """
-        my_amenity = Amenity()
-        my_amenity.name = "Wi-Fi"
-        self.assertEqual(my_amenity.name, 'Wi-Fi')
+    #def test_name_amenity(self):
+        #"""[Test attribute name of Class Amenity]
+       # """
+        #my_amenity = Amenity()
+        #my_amenity.name = "Wi-Fi"
+        #self.assertEqual(my_amenity.name, 'Wi-Fi')
 
 if __name__ == '__main__':
     unittest.main()
