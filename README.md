@@ -7,6 +7,19 @@ This abstraction will also allow you to change the type of storage easily withou
 
 The console will be a tool to validate this storage engine
 
+ ### Prerrequisitos
+ - Instalar Git
+
+ - Clonar repositorio
+
+ - Instalar python
+
+$ sudo apt-get install git
+$ sudo apt-get install python3-pep8
+Para ejecutar el intérprete de comandos:
+
+$ ./console.py
+
 basically the console do:
 
 -<br>Create a new object (ex: a new User or a new Place)</br>
