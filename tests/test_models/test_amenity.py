@@ -13,11 +13,11 @@ class TestAmenity(unittest.TestCase):
     def test_docstring(self):
         """[Checks is docstring exist]
         """
-        self.assertTrue(len(Amenity.__doc__) >= 1)
-        self.assertTrue(len(Amenity.__init__.__doc__) >= 1)
-        self.assertTrue(len(Amenity.__str__.__doc__) >= 1)
-        self.assertTrue(len(Amenity.save.__doc__) >= 1)
-        self.assertTrue(len(Amenity.to_dict.__doc__) >= 1)
+        self.assertTrue(len(Amenity.__doc__) > 1)
+        self.assertTrue(len(Amenity.__init__.__doc__) > 1)
+        self.assertTrue(len(Amenity.__str__.__doc__) > 1)
+        self.assertTrue(len(Amenity.save.__doc__) > 1)
+        self.assertTrue(len(Amenity.to_dict.__doc__) > 1)
 
     # def test_pep8(self):
     #     """[Test for pep8]
