@@ -21,7 +21,7 @@ The console will be a tool to validate this storage engine
 
 ### How to install
 
-- In your linux terminal use the command `git clone https://github.com/jdanielue/AirBnB_clone`
+- In your linux terminal use the command `git clone https://github.com/caramonp/AirBnB_clone.git`
 
 ### To run the shell: :runner:
 
