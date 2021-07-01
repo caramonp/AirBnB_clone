@@ -33,14 +33,6 @@ class testBaseModel(unittest.TestCase):
         doc = BaseModel.__doc__
         self.assertGreater(len(doc), 1)
 
-    # def test_pep8_conformance_base_model(self):
-    #     """[Test that models/base_model.py conforms to PEP8]
-    #     """
-    #     _pep8 = pep8.StyleGuide(quiet=True)
-    #     result = _pep8.check_files(['models/base_model.py'])
-    #     self.assertEqual(result.total_errors, 0,
-    #                      "Found code style errors (and warnings).")
-
     def test_doc_constructor(self):
         """[Constructor documentation]
         """
@@ -94,10 +86,6 @@ class testBaseModel(unittest.TestCase):
         base_save.save()
         with open("file.json", 'r') as f:
             self.assertIn(base_save.id, f.read())
-        date1 = base_save.updated_at
-        base_save.save()
-        self.assertNotEqual(date1, base_save.updated_at)
-
 
 if __name__ == '__main__':
     unittest.main()
