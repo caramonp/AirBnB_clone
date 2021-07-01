@@ -63,6 +63,7 @@ class testBaseModel(unittest.TestCase):
         model = BaseModel()
         model_2 = BaseModel()
         self.assertNotEqual(model.id, model_2.id)
+        self.assertTrue(hasattr(basemodel1, "id"))
 
     def test_datetime_BaseModel(self):
         """[testing different datetime base model]
@@ -86,6 +87,9 @@ class testBaseModel(unittest.TestCase):
         base_save.save()
         with open("file.json", 'r') as f:
             self.assertIn(base_save.id, f.read())
+        date1 = base_save.updated_at
+        base_save.save()
+        self.assertNotEqual(date1, base_save.updated_at)
 
 if __name__ == '__main__':
     unittest.main()
