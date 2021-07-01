@@ -1,7 +1,19 @@
 # AirBnB: The console.
 
-### About the proyect
-(aqui va la descripcion del proyecto, que es la consola que hace, etc)
+### :computer: About the proyect :computer:
+The first piece is to manipulate a powerful storage system. This storage engine will give us an abstraction between “My object” and “How they are stored and persisted”. This means: from your console code (the command interpreter itself) and from the front-end and RestAPI you will build later, you won’t have to pay attention (take care) of how your objects are stored.
+
+This abstraction will also allow you to change the type of storage easily without updating all of your codebase.
+
+The console will be a tool to validate this storage engine
+
+basically the console do:
+
+-<br>Create a new object (ex: a new User or a new Place)</br>
+-<br>Retrieve an object from a file, a database etc</br>
+-<br>Do operations on objects (count, compute stats, etc)</br>
+-<br>Update attributes of an object</br>
+-<br>Destroy an object</br>
 
 ![Objetive Console](https://github.com/caramonp/AirBnB_clone/blob/main/images/objetive_console.JPG)
 
