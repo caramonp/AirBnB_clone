@@ -1,5 +1,4 @@
-# AirBnB: The console.
-![Objetive Console](https://github.com/caramonp/AirBnB_clone/blob/main/images/images.png)
+![# AirBnB: The console.](https://github.com/caramonp/AirBnB_clone/blob/main/images/images.png)
 ### :computer: About the proyect :computer:
 The first piece is to manipulate a powerful storage system. This storage engine will give us an abstraction between “My object” and “How they are stored and persisted”. This means: from your console code (the command interpreter itself) and from the front-end and RestAPI you will build later, you won’t have to pay attention (take care) of how your objects are stored.
 
@@ -7,18 +6,19 @@ This abstraction will also allow you to change the type of storage easily withou
 
 The console will be a tool to validate this storage engine
 
- ### Prerrequisitos
- - Instalar Git
+### Prerequisites: information_desk_person:
+ - Install Git
 
- - Clonar repositorio
+ - Clone repository
 
- - Instalar python
+ - Install python
 
-$ sudo apt-get install git
-$ sudo apt-get install python3-pep8
-Para ejecutar el intérprete de comandos:
+    $ sudo apt-get install git
+    $ sudo apt-get install python3-pep8
 
-$ ./console.py
+### To run the shell:
+
+![$ ./console.py](https://github.com/caramonp/AirBnB_clone/blob/main/images/images.png)
 
 basically the console do:
 
@@ -37,6 +37,8 @@ The console has the ability to:
 - create a data model
 - manage (create, update, destroy, etc) objects via a console / command interpreter.
 - store and persist objects to a file (JSON file).
+
+    
 
 ### How to install
 (requerimientos del sistema, que programas y que versiones usamos, y comandos para intalar este programa)
