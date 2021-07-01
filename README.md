@@ -40,8 +40,14 @@ The console has the ability to:
 
 ### How to install
 (requerimientos del sistema, que programas y que versiones usamos, y comandos para intalar este programa)
+
+
 ### Flowchard
-(imagenes del diagrama de flujo el programa)
+
+![Flowchard](https://github.com/caramonp/AirBnB_clone/blob/main/images/Airbnb_c14_flowchard.jpg)
+![See](https://miro.com/app/board/o9J_l9Ohrcw=/?moveToWidget=3074457360852427129&cot=14)
+
+
 ### Commands
 (Comandos y clases permitidas)
 ### How to use it
