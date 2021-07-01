@@ -2,7 +2,7 @@
 """test filestorage"""
 
 import unittest
-# import pep8
+import pep8
 import json
 import os
 from models.user import User
@@ -13,18 +13,18 @@ from models import storage
 class TestFileStorage(unittest.TestCase):
     '''test the FileStorage'''
 
-    # def test_pep8_base(self):
-    #     """ test pep8 style"""
-    #     self.assertEqual(os.system('pep8 models/engine/file_storage.py'), 0)
+    def test_pep8_base(self):
+        """ test pep8 style"""
+        self.assertEqual(os.system('pep8 models/engine/file_storage.py'), 0)
 
     def test_module_docstring(self):
         """test documentation"""
-        self.assertTrue(len(FileStorage.__doc__) >= 1)
-        self.assertTrue(len(FileStorage.__init__.__doc__) >= 1)
-        self.assertTrue(len(FileStorage.all.__doc__) >= 1)
-        self.assertTrue(len(FileStorage.new.__doc__) >= 1)
-        self.assertTrue(len(FileStorage.save.__doc__) >= 1)
-        self.assertTrue(len(FileStorage.reload.__doc__) >= 1)
+        self.assertTrue(len(FileStorage.__doc__) > 1)
+        self.assertTrue(len(FileStorage.__init__.__doc__) > 1)
+        self.assertTrue(len(FileStorage.all.__doc__) > 1)
+        self.assertTrue(len(FileStorage.new.__doc__) > 1)
+        self.assertTrue(len(FileStorage.save.__doc__) > 1)
+        self.assertTrue(len(FileStorage.reload.__doc__) > 1)
 
     def test_name_file(self):
         """teste name module"""
@@ -45,14 +45,18 @@ class TestFileStorage(unittest.TestCase):
         storage = FileStorage()
         obj = storage.all()
         user = User()
-        user.id = "123455"
-        user.name = "Aiko"
+        user.id = "0123"
+        user.name = "Holberton"
         storage.new(user)
-        key = user.__class__.__name__ + "." + (user.id)
-        self.assertIsNotNone(obj[key])
+        self.assertIsNotNone(obj[user.__class__.__name__ + "." + user.id])
+        self .assertEqual(obj[user.__class__.__name__ + "." + user.id], user)
+        try:
+            self.assertRaises(storage.new(None), TypeError)
+        except:
+            pass
 
     def test_save(self):
-        """testing the .json file"""
+        """test save"""
         storage = FileStorage()
         storage.save()
         self.assertTrue(os.path.exists("file.json"))
