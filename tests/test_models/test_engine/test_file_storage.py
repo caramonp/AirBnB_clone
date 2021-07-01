@@ -19,12 +19,12 @@ class TestFileStorage(unittest.TestCase):
 
     def test_module_docstring(self):
         """test documentation"""
-        self.assertTrue(len(FileStorage.__doc__) >= 1)
-        self.assertTrue(len(FileStorage.__init__.__doc__) >= 1)
-        self.assertTrue(len(FileStorage.all.__doc__) >= 1)
-        self.assertTrue(len(FileStorage.new.__doc__) >= 1)
-        self.assertTrue(len(FileStorage.save.__doc__) >= 1)
-        self.assertTrue(len(FileStorage.reload.__doc__) >= 1)
+        self.assertTrue(len(FileStorage.__doc__) > 1)
+        self.assertTrue(len(FileStorage.__init__.__doc__) > 1)
+        self.assertTrue(len(FileStorage.all.__doc__) > 1)
+        self.assertTrue(len(FileStorage.new.__doc__) > 1)
+        self.assertTrue(len(FileStorage.save.__doc__) > 1)
+        self.assertTrue(len(FileStorage.reload.__doc__) > 1)
 
     def test_name_file(self):
         """teste name module"""
@@ -56,7 +56,7 @@ class TestFileStorage(unittest.TestCase):
             pass
 
     def test_save(self):
-        """testing the .json file"""
+        """test save"""
         storage = FileStorage()
         storage.save()
         self.assertTrue(os.path.exists("file.json"))
