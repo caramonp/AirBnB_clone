@@ -63,7 +63,7 @@ class testBaseModel(unittest.TestCase):
             "updated_at": str,
             "id": str,
             "created_at": str
-            }
+        }
 
     def test_uuid_BaseModel(self):
         """[testing different id using uuid]
@@ -88,12 +88,16 @@ class testBaseModel(unittest.TestCase):
         id_model = my_model.id
 
     def test_save(self):
-            """[Test for is saved to file]
-            """
-            base_save = BaseModel()
-            base_save.save()
-            with open("file.json", 'r') as f:
-                self.assertIn(base_save.id, f.read())
+        """[Test for is saved to file]
+        """
+        base_save = BaseModel()
+        base_save.save()
+        with open("file.json", 'r') as f:
+            self.assertIn(base_save.id, f.read())
+        date1 = base_save.updated_at
+        base_save.save()
+        self.assertNotEqual(date1, base_save.updated_at)
 
-    if __name__ == '__main__':
-        unittest.main()
+
+if __name__ == '__main__':
+    unittest.main()
