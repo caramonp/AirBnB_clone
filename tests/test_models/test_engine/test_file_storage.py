@@ -64,5 +64,9 @@ class TestFileStorage(unittest.TestCase):
         prueba.save()
         self.assertTrue(os.path.exists('file.json'))
 
+    def test_reload_method(self):
+        """Checks if reload method is working"""
+        self.assertTrue(models.storage.reload() is None)
+
 if __name__ == '__main__':
     unittest.main()
