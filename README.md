@@ -30,11 +30,9 @@ The console has the ability to:
 
 
 ### Flowchard
-<p>
-<a href="https://github.com/caramonp/AirBnB_clone/blob/main/images/Airbnb_c14_flowchard.jpg">
-<img src=https://github.com/caramonp/AirBnB_clone/images/Airbnb_c14_flowchard.jpg">
-</a>
-</p>
+
+![Flowchard](https://github.com/caramonp/AirBnB_clone/blob/main/images/Airbnb_c14_flowchard.jpg)
+Format: ![See](https://miro.com/app/board/o9J_l9Ohrcw=/?moveToWidget=3074457360852427129&cot=14)
 
 
 ### Commands
