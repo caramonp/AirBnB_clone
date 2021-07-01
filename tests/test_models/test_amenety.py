@@ -34,7 +34,7 @@ class TestAmenity(unittest.TestCase):
         self.assertTrue(hasattr(test_2, "created_at"))
         self.assertTrue(hasattr(test_2, "updated_at"))
         self.assertTrue(hasattr(test_2, "id"))
-        
+
     def test_name_amenity(self):
         """[Test attribute name of Class Amenity]
         """

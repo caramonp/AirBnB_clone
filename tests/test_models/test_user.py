@@ -9,7 +9,6 @@ class Testuser(unittest.TestCase):
     """[Test for the class User]
     """
 
-    
     def test_docstring(self):
         """[Checks is docstring exist]
         """
@@ -18,7 +17,7 @@ class Testuser(unittest.TestCase):
         self.assertTrue(len(User.__str__.__doc__) >= 1)
         self.assertTrue(len(User.save.__doc__) >= 1)
         self.assertTrue(len(User.to_dict.__doc__) >= 1)
-        
+
     def test_pep8_conformance_user(self):
         """[Test for style of PEP8]
         """
