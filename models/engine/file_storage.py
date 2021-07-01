@@ -4,11 +4,7 @@
 class BaseModel that defines all common
 methods for other classes
 """
-from uuid import uuid4
-from datetime import datetime
 import json
-import models
-import os
 
 
 class FileStorage:
@@ -61,6 +57,7 @@ class FileStorage:
         from models.review import Review
         from models.user import User
 
+        dict_desco = {}
         try:
             with open(FileStorage.__file_path) as file:
                 dict_desco = json.load(file)
