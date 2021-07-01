@@ -74,10 +74,10 @@ class testBaseModel(unittest.TestCase):
     def test_string_representation(self):
         """[Test if the output is a str]
         """
-        my_model = BaseModel()
-        my_model.name = "Holberton"
-        my_model.my_number = 89
-        id_model = my_model.id
+        basemodel1 = BaseModel()
+        printed = "[{}] ({}) {}".format(
+            basemodel1.__class__.__name__, basemodel1.id, basemodel1.__dict__)
+        self.assertEqual(str(basemodel1), printed)
 
     def test_save(self):
         """[Test for is saved to file]
