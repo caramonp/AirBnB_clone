@@ -63,7 +63,7 @@ class testBaseModel(unittest.TestCase):
         model = BaseModel()
         model_2 = BaseModel()
         self.assertNotEqual(model.id, model_2.id)
-        self.assertTrue(hasattr(basemodel1, "id"))
+        self.assertTrue(hasattr(model, "id"))
 
     def test_datetime_BaseModel(self):
         """[testing different datetime base model]

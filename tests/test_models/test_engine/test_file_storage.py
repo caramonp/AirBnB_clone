@@ -8,7 +8,7 @@ import os
 from models.user import User
 from models.engine.file_storage import FileStorage
 from models.base_model import BaseModel
-
+from models import storage
 
 class TestFileStorage(unittest.TestCase):
     '''test the FileStorage'''
@@ -66,7 +66,7 @@ class TestFileStorage(unittest.TestCase):
 
     def test_reload_method(self):
         """Checks if reload method is working"""
-        self.assertTrue(models.storage.reload() is None)
+        self.assertTrue(storage.reload() is None)
 
 if __name__ == '__main__':
     unittest.main()
