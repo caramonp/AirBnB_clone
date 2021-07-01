@@ -3,8 +3,8 @@
 [Unittest for Test amenity]
 """
 from models.amenity import Amenity
-import pep8
 import unittest
+# import pep8
 
 
 class TestAmenity(unittest.TestCase):

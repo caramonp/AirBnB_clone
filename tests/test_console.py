@@ -2,7 +2,7 @@
 """[Test for the console]
 """
 import unittest
-import pep8
+# import pep8
 
 
 class Testconsole(unittest.TestCase):
