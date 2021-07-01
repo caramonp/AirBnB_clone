@@ -45,15 +45,11 @@ class TestFileStorage(unittest.TestCase):
         storage = FileStorage()
         obj = storage.all()
         user = User()
-        user.id = "0123"
-        user.name = "Holberton"
+        user.id = "123455"
+        user.name = "Aiko"
         storage.new(user)
-        self.assertIsNotNone(obj[user.__class__.__name__ + "." + user.id])
-        self .assertEqual(obj[user.__class__.__name__ + "." + user.id], user)
-        try:
-            self.assertRaises(storage.new(None), TypeError)
-        except:
-            pass
+        key = user.__class__.__name__ + "." + (user.id)
+        self.assertIsNotNone(obj[key])
 
     def test_save(self):
         """testing the .json file"""
