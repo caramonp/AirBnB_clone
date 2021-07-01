@@ -19,6 +19,10 @@ The console will be a tool to validate this storage engine
     $ sudo apt-get install git
     $ sudo apt-get install python3-pep8
 
+### How to install
+
+- In your linux terminal use the command `git clone https://github.com/jdanielue/AirBnB_clone`
+
 ### To run the shell: :runner:
 
 Execution
@@ -42,6 +46,23 @@ basically the console do :sunglasses:
 - quit/EOF - quit the console
 - help - see descriptions of commands
 
+### Commands
+
+- `create`: Creates a new instance, saves it (to the JSON file) and prints the instance id.
+- `show`: Prints the string representation of an instance based on the class name and instance id.
+- `destroy`:  Deletes an instance based on the class name and id.
+- `all`: Prints all string representation of all instances based or not on the class name.
+- `update`: Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file).
+
+### Classes allowed
+
+- `BaseModel`: that defines all common attributes/methods for other classes.
+- `State`
+- `City`
+- `Amenity`
+- `Place`
+- `Review`
+
 ### How to use it
 
 ![$ usos](https://github.com/caramonp/AirBnB_clone/blob/main/images/usos.png)
@@ -59,18 +80,10 @@ The console has the ability to:
 - store and persist objects to a file (JSON file).
 
 
-### How to install
-(requerimientos del sistema, que programas y que versiones usamos, y comandos para intalar este programa)
-
-
 ### Flowchard
 
 ![Flowchard](https://github.com/caramonp/AirBnB_clone/blob/main/images/Airbnb_c14_flowchard.jpg)
-![See](https://miro.com/app/board/o9J_l9Ohrcw=/?moveToWidget=3074457360852427129&cot=14)
-
-
-### Commands
-(Comandos y clases permitidas)
+See the full image [here](https://miro.com/app/board/o9J_l9Ohrcw=/?moveToWidget=3074457360852427129&cot=14)
 
 ### Rsources :closed_book:
 
