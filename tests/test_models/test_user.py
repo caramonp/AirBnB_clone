@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Test User"""
 import unittest
-# import pep8
+import pep8
 from models.user import User
 
 
@@ -18,13 +18,13 @@ class Testuser(unittest.TestCase):
         self.assertTrue(len(User.save.__doc__) >= 1)
         self.assertTrue(len(User.to_dict.__doc__) >= 1)
 
-    # def test_pep8_conformance_user(self):
-    #     """[Test for style of PEP8]
-    #     """
-    #     Style = pep8.StyleGuide(quiet=True)
-    #     result = Style.check_files(['models/user.py'])
-    #     self.assertEqual(result.total_errors, 0,
-    #                      "Found code style errors (and warnings).")
+    def test_pep8_conformance_user(self):
+        """[Test for style of PEP8]
+        """
+        Style = pep8.StyleGuide(quiet=True)
+        result = Style.check_files(['models/user.py'])
+        self.assertEqual(result.total_errors, 0,
+        "Found code style errors (and warnings).")
 
     def test_User(self):
         """
