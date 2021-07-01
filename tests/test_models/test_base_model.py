@@ -94,6 +94,8 @@ class testBaseModel(unittest.TestCase):
         base_save.save()
         with open("file.json", 'r') as f:
             self.assertIn(base_save.id, f.read())
-
+        date1 = base_save.updated_at
+        base_save.save()
+        self.assertNotEqual(date1, base_save.updated_at)
 if __name__ == '__main__':
     unittest.main()
