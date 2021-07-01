@@ -18,7 +18,7 @@ class Testcity(unittest.TestCase):
         self.assertTrue(len(City.__str__.__doc__) >= 1)
         self.assertTrue(len(City.save.__doc__) >= 1)
         self.assertTrue(len(City.to_dict.__doc__) >= 1)
-    
+
     def test_pep8_conformance_city(self):
         """[Test that for style PEP8]
         """
@@ -40,7 +40,7 @@ class Testcity(unittest.TestCase):
         my_city = City()
         my_city.name = "Medellin"
         self.assertEqual(my_city.name, 'Medellin')
-        
+
     def test_after_to_dict(self):
         """[Test if City have the attributes correctl]
         """
@@ -55,8 +55,6 @@ class Testcity(unittest.TestCase):
         self.assertTrue(type(test_dict['updated_at']), 'str')
         self.assertTrue(type(test_dict['id']), 'str')
         self.assertNotEqual(my_model.id, new_model.id)
-  
-  
+
 if __name__ == '__main__':
     unittest.main()
-    

@@ -8,13 +8,14 @@ import os
 from models.user import User
 from models.engine.file_storage import FileStorage
 
+
 class TestFileStorage(unittest.TestCase):
     '''test the FileStorage'''
 
     def test_pep8_base(self):
         """ test pep8 style"""
         self.assertEqual(os.system('pep8 models/engine/file_storage.py'), 0)
-    
+
     def test_module_docstring(self):
         """test documentation"""
         self.assertTrue(len(FileStorage.__doc__) >= 1)
@@ -37,7 +38,7 @@ class TestFileStorage(unittest.TestCase):
         storage = FileStorage()
         self.assertEqual(type(storage.all()), dict)
         self.assertIs(storage.all(), storage._FileStorage__objects)
-    
+
     def test_new(self):
         """test new creation"""
         storage = FileStorage()

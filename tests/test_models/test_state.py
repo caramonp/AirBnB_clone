@@ -13,7 +13,7 @@ class TestState(unittest.TestCase):
     def test_pep8(self):
         """ test pep8 style"""
         self.assertEqual(os.system('pep8 models/state.py'), 0)
-    
+
     def test_module_docstring(self):
         """test documentation"""
         self.assertTrue(len(State.__doc__) >= 1)

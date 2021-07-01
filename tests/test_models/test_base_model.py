@@ -39,7 +39,7 @@ class testBaseModel(unittest.TestCase):
         _pep8 = pep8.StyleGuide(quiet=True)
         result = _pep8.check_files(['models/base_model.py'])
         self.assertEqual(result.total_errors, 0,
-                        "Found code style errors (and warnings).")
+                         "Found code style errors (and warnings).")
 
     def test_doc_constructor(self):
         """[Constructor documentation]
@@ -64,6 +64,7 @@ class testBaseModel(unittest.TestCase):
             "id": str,
             "created_at": str
         }
+
     def test_uuid_BaseModel(self):
         """[testing different id using uuid]
         """
