@@ -13,11 +13,11 @@ class Testcity(unittest.TestCase):
     def test_docstring(self):
         """[Checks is docstring exist]
         """
-        self.assertTrue(len(City.__doc__) >= 1)
-        self.assertTrue(len(City.__init__.__doc__) >= 1)
-        self.assertTrue(len(City.__str__.__doc__) >= 1)
-        self.assertTrue(len(City.save.__doc__) >= 1)
-        self.assertTrue(len(City.to_dict.__doc__) >= 1)
+        self.assertTrue(len(City.__doc__) > 1)
+        self.assertTrue(len(City.__init__.__doc__) > 1)
+        self.assertTrue(len(City.__str__.__doc__) > 1)
+        self.assertTrue(len(City.save.__doc__) > 1)
+        self.assertTrue(len(City.to_dict.__doc__) > 1)
 
     # def test_pep8_conformance_city(self):
     #     """[Test that for style PEP8]
