@@ -59,6 +59,9 @@ class TestFileStorage(unittest.TestCase):
         storage = FileStorage()
         storage.save()
         self.assertTrue(os.path.exists("file.json"))
+        prueba = BaseModel()
+        prueba.save()
+        self.assertTrue(os.path.exists('file.json'))
 
 if __name__ == '__main__':
     unittest.main()
