@@ -12,6 +12,8 @@ from models import storage
 
 class TestFileStorage(unittest.TestCase):
     """Testing instantiation of the FileStorage class."""
+    storage = FileStorage()
+    path = storage._FileStorage__file_path
 
     def test_FileStorage_instantiation_no_args(self):
         self.assertEqual(type(FileStorage()), FileStorage)
@@ -58,9 +60,38 @@ class TestFileStorage(unittest.TestCase):
         except:
             pass
 
-    def test_reload_method(self):
-        """Checks if reload method is working"""
-        self.assertTrue(storage.reload() is None)
+    def test_save(self):
+        """test save"""
+        storage = FileStorage()
+        storage.save()
+        self.assertTrue(os.path.exists("file.json"))
+        test = BaseModel()
+        test.save()
+        self.assertTrue(os.path.exists('file.json'))
+
+    def test_save_another_instance(self):
+        """
+        Tests for save another instance in path
+        """
+        bm2_instance = BaseModel()
+        bm2_instance.save()
+        key = type(bm2_instance).__name__ + "." + str(bm2_instance.id)
+        with open(TestFileStorage.path, mode="r", encoding="utf-8") as f:
+            reader = json.load(f)
+        self.assertEqual(
+            reader[key], TestFileStorage.storage.all()[key].to_dict())
+
+    def test_save_another_instance(self):
+        """
+        Tests for save another instance in path
+        """
+        bm2_instance = BaseModel()
+        bm2_instance.save()
+        key = type(bm2_instance).__name__ + "." + str(bm2_instance.id)
+        with open(TestFileStorage.path, mode="r", encoding="utf-8") as f:
+            reader = json.load(f)
+        self.assertEqual(
+            reader[key], TestFileStorage.storage.all()[key].to_dict())
 
 if __name__ == '__main__':
     pass
