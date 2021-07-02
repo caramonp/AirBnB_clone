@@ -58,16 +58,6 @@ class TestFileStorage(unittest.TestCase):
         except:
             pass
 
-    def test_save(self):
-        """test save"""
-        storage = FileStorage()
-        storage.save()
-        self.assertTrue(os.path.exists("file.json"))
-        test = BaseModel()
-        test.save()
-        self.assertTrue(os.path.exists('file.json'))
-
-
     def test_reload_method(self):
         """Checks if reload method is working"""
         self.assertTrue(storage.reload() is None)
