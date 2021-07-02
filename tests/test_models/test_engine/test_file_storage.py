@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Defines unittests for models/engine/file_storage.py."""
 from models.engine.file_storage import FileStorage
-
+import unittest
 
 class TestFileStorage(unittest.TestCase):
     """Testing instantiation of the FileStorage class."""
