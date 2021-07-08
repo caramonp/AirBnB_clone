@@ -1,0 +1,25 @@
+{
+    "BaseModel.6d10794f-c7a5-48a0-949c-c5902cc9aff6": {
+        "id": "6d10794f-c7a5-48a0-949c-c5902cc9aff6",
+        "created_at": "2021-06-29T14:14:47.785993",
+        "updated_at": "2021-06-29T14:15:39.213064",
+        "first_name": "Betty",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.69afb602-a062-423f-84d9-84b4fd491876": {
+        "id": "69afb602-a062-423f-84d9-84b4fd491876",
+        "created_at": "2021-06-29T14:19:19.294755",
+        "updated_at": "2021-06-29T14:19:19.294985",
+        "name": "Holberton",
+        "my_number": 89,
+        "__class__": "BaseModel"
+    },
+    "BaseModel.c131c574-de6d-4423-a858-a41c522a5ab9": {
+        "id": "c131c574-de6d-4423-a858-a41c522a5ab9",
+        "created_at": "2021-06-29T14:21:38.603106",
+        "updated_at": "2021-06-29T14:21:38.603120",
+        "name": "Holberton",
+        "my_number": 89,
+        "__class__": "BaseModel"
+    }
+}

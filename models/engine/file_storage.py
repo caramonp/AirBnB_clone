@@ -47,7 +47,7 @@ class FileStorage:
             json.dump(dict_string, file, indent=4)
 
     def reload(self):
-        """[ deserializes the JSON file to __objects]
+        """[deserializes the JSON file to __objects]
         """
         from models.base_model import BaseModel
         from models.state import State
