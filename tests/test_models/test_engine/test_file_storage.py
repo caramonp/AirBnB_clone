@@ -1,17 +1,22 @@
 #!/usr/bin/python3
-"""test filestorage"""
-
+"""Defines unittests for models/engine/file_storage.py."""
+from models.engine.file_storage import FileStorage
 import unittest
 import pep8
 import json
 import os
 from models.user import User
-from models.engine.file_storage import FileStorage
 from models.base_model import BaseModel
 from models import storage
 
+
 class TestFileStorage(unittest.TestCase):
-    '''test the FileStorage'''
+    """Testing instantiation of the FileStorage class."""
+    storage = FileStorage()
+    path = storage._FileStorage__file_path
+
+    def test_FileStorage_instantiation_no_args(self):
+        self.assertEqual(type(FileStorage()), FileStorage)
 
     def test_pep8_base(self):
         """ test pep8 style"""
@@ -64,10 +69,29 @@ class TestFileStorage(unittest.TestCase):
         test.save()
         self.assertTrue(os.path.exists('file.json'))
 
+    def test_save_another_instance(self):
+        """
+        Tests for save another instance in path
+        """
+        bm2_instance = BaseModel()
+        bm2_instance.save()
+        key = type(bm2_instance).__name__ + "." + str(bm2_instance.id)
+        with open(TestFileStorage.path, mode="r", encoding="utf-8") as f:
+            reader = json.load(f)
+        self.assertEqual(
+            reader[key], TestFileStorage.storage.all()[key].to_dict())
 
-    def test_reload_method(self):
-        """Checks if reload method is working"""
-        self.assertTrue(storage.reload() is None)
+    def test_save_another_instance(self):
+        """
+        Tests for save another instance in path
+        """
+        bm2_instance = BaseModel()
+        bm2_instance.save()
+        key = type(bm2_instance).__name__ + "." + str(bm2_instance.id)
+        with open(TestFileStorage.path, mode="r", encoding="utf-8") as f:
+            reader = json.load(f)
+        self.assertEqual(
+            reader[key], TestFileStorage.storage.all()[key].to_dict())
 
 if __name__ == '__main__':
-    unittest.main()
+    pass
