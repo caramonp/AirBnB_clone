@@ -5,5 +5,5 @@ footer {height: 60px;
       justify-content:center;
       position:fixed;
       bottom:0;
-      border-top: 1px #CCCCCC;
-      outline: auto;}
+      border-top: 1px solid #CCCCCC;
+      }
